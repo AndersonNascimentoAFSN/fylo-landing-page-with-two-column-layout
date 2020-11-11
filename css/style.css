@@ -1,0 +1,594 @@
+/* Box sizing rules */
+/* line 2, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+/* line 9, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+ul,
+ol {
+  padding: 0;
+}
+
+/* line 13, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 15, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Remove default margin */
+/* line 21, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+/* line 39, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+/* line 47, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/* line 53, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* line 58, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+/* line 64, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* line 69, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  /* line 78, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_reset.scss */
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* line 1, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+:root {
+  --dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+  --brigth-blue: hsl(224, 93%, 58%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+  --grayish-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+  --font: 'Raleway', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --bg-description: #f8f8fe;
+}
+
+/* line 13, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+body {
+  font-family: var(--font-body);
+}
+
+/*Title and Paragraph*/
+/* line 19, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.title {
+  font-family: var(--font);
+  color: var(--dark-blue);
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* line 26, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.paragraph {
+  font-size: 1.12em;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+/*CALL TO ACTION*/
+/* line 34, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.button {
+  background: var(--brigth-blue);
+  color: var(--grayish-blue);
+  border: none;
+  border-radius: 2px;
+  width: 200px;
+  padding: 10.7px 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9em;
+  font-family: var(--font);
+  box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* line 48, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.button:hover {
+  transition: 0.5s;
+  background: var(--moderate-cyan);
+}
+
+/* line 55, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.input {
+  padding: 8.7px 20px;
+  font-family: var(--font);
+}
+
+/*HEADER */
+/* line 63, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.header {
+  display: grid;
+  grid-template-columns: minmax(80px, 1fr) max-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 30px 90px 30px;
+}
+
+/* line 74, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.nav-header ul {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 30px;
+}
+
+/* line 78, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.nav-header ul li a {
+  padding: 10px 0;
+  color: var(--dark-blue);
+  font-family: var(--font);
+  font-size: 1.1em;
+}
+
+/*INTRO*/
+/* line 88, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.fylo-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-items: center;
+  grid-gap: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 200px;
+}
+
+/* line 100, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.fylo-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 105, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.call-to-action-intro {
+  display: flex;
+  align-items: center;
+}
+
+/* line 108, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.call-to-action-intro input {
+  width: 320px;
+  margin-right: 16px;
+}
+
+/*DESCRIPTION*/
+/* line 116, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.fylo-description-bg {
+  background: var(--bg-description);
+  padding-bottom: 100px;
+}
+
+/* line 119, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.fylo-description-bg .desktop-bg-curve {
+  width: 100%;
+  position: relative;
+  bottom: 100px;
+  height: 100px;
+}
+
+/* line 127, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.fylo-description-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-items: center;
+  grid-gap: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* line 138, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.fylo-description {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 143, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.how-work-link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* line 150, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.how-work-link a {
+  color: var(--moderate-cyan);
+}
+
+/* line 152, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.how-work-link a::before {
+  content: '';
+  display: block;
+  width: 166px;
+  height: 1px;
+  background: var(--moderate-cyan);
+  position: absolute;
+  top: 30px;
+}
+
+/* line 162, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.how-work-link img {
+  width: 16px;
+}
+
+/* line 167, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.testimonial {
+  max-width: 360px;
+  border-radius: 4px;
+  background: #fff;
+  padding: 20px 30px;
+  color: var(--dark-blue);
+  box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* line 176, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.testimonial > img {
+  width: 13px;
+  margin-bottom: 16px;
+}
+
+/* line 180, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.testimonial p {
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+/* line 187, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.avatar {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: repeat(2, max-content);
+}
+
+/* line 192, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.avatar img {
+  grid-area: 1 / 1 / 3 / 2;
+  width: 30px;
+  border-radius: 50px;
+  margin-right: 6px;
+}
+
+/* line 198, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.avatar span:nth-of-type(1) {
+  grid-area: 1 / 2 / 2 / 3;
+  font-size: 0.7em;
+  font-weight: 700;
+  font-family: var(--font);
+  letter-spacing: 0.1em;
+}
+
+/* line 205, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.avatar span:nth-of-type(2) {
+  grid-area: 2 / 2 / 3 / 3;
+  font-size: 0.5em;
+}
+
+/*ACCESS*/
+/* line 213, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.fylo-access-bg {
+  background: var(--desaturated-blue);
+  color: var(--grayish-blue);
+  padding: 100px 0 90px 0;
+}
+
+/* line 219, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.fylo-access-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* line 227, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.fylo-access-grid h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* line 231, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.fylo-access-grid p {
+  font-size: 1em;
+  max-width: 500px;
+}
+
+/* line 237, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.access {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 242, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.call-to-action-access {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 245, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.call-to-action-access input {
+  max-width: 480px;
+  margin-bottom: 16px;
+}
+
+/*FOOTER*/
+/* line 253, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.footer-bg {
+  background: var(--dark-blue);
+}
+
+/* line 256, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 30px 60px 30px;
+  color: var(--grayish-blue);
+}
+
+/* line 263, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: row;
+  grid-gap: 20px;
+}
+
+/* line 270, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.logo-footer {
+  margin-bottom: 20px;
+  width: 166px;
+  height: 49px;
+}
+
+/* line 277, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.links-footer a {
+  color: var(--grayish-blue);
+}
+
+/* line 282, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.footer-grid > div {
+  margin-bottom: 40px !important;
+}
+
+/* line 286, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: repeat(2, max-content);
+  align-items: center;
+}
+
+/* line 291, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.contact-grid img {
+  width: 20px;
+  margin: 10px 10px 10px 0;
+}
+
+/* line 298, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.contact li, .about li {
+  margin-bottom: 10px;
+}
+
+/* line 301, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.contact a, .about a {
+  padding: 10px;
+}
+
+/* line 306, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.social-media {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* line 310, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.social-media img {
+  border: 1px solid var(--grayish-blue);
+  border-radius: 50px;
+}
+
+/* line 314, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.social-media a {
+  width: 30px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 913px) {
+  /* line 6, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .illustration-intro, .illustration-description {
+    order: -1;
+    justify-self: center;
+  }
+  /* line 12, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .fylo-intro h2 {
+    text-align: center;
+    max-width: 100%;
+  }
+  /* line 16, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .fylo-intro p {
+    align-self: center;
+    text-align: center;
+    max-width: 100%;
+  }
+  /* line 22, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .call-to-action-intro {
+    flex-direction: column;
+  }
+  /* line 24, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .call-to-action-intro input {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    padding: 11.2px 20px;
+  }
+  /* line 30, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .call-to-action-intro button {
+    width: 100%;
+    padding: 14.55px 0;
+  }
+  /* line 38, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .fylo-description {
+    align-items: center;
+  }
+  /* line 40, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .fylo-description h2 {
+    text-align: center;
+    max-width: 100%;
+  }
+  /* line 44, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .fylo-description p {
+    max-width: 100%;
+  }
+  /* line 51, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .fylo-access-grid p {
+    text-align: center;
+  }
+  /* line 55, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .access {
+    align-items: center;
+  }
+  /* line 59, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .call-to-action-access {
+    justify-content: center;
+  }
+  /* line 61, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .call-to-action-access input {
+    max-width: 100%;
+  }
+  /* line 64, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .call-to-action-access .button-access {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  /* line 73, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .header {
+    gap: 40px;
+  }
+  /* line 74, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .header ul li a {
+    font-size: 0.7em;
+    padding: 5px 0;
+  }
+  /* line 79, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .header ul {
+    gap: 10px;
+  }
+  /* line 84, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .title {
+    font-size: 1.2em;
+  }
+  /* line 87, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .paragraph {
+    font-size: 0.9em;
+  }
+  /* line 91, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .button {
+    font-size: 0.6em !important;
+  }
+  /* line 94, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .input {
+    font-size: 0.6em;
+  }
+  /* line 98, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .fylo-intro-grid, .fylo-description-grid, .fylo-access-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  /* line 102, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .fylo-access-grid {
+    grid-gap: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  /* line 108, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .fylo-access-grid h2 {
+    font-size: 1.1em;
+  }
+  /* line 111, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_responsive.scss */
+  .fylo-access-grid p {
+    font-size: 0.8em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
