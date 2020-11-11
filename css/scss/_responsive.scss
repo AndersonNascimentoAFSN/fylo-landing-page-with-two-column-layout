@@ -112,4 +112,17 @@
       font-size: 0.8em;
     }
   }
+
+  .fylo-description-bg {
+    .desktop-bg-curve {
+      display: none;
+    }
+  }
+  .mobile-bg-curve {
+    display: block;
+    width: 100%;
+    position: relative;
+    bottom: 100px; 
+    height: 100px;
+  }
 }
