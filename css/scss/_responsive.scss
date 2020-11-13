@@ -1,8 +1,7 @@
 
 
 
-@media only screen and (max-width: 913px){
-
+@media only screen and (max-width: 953px){
   .illustration-intro, .illustration-description {
     order: -1;
     justify-self: center;
@@ -10,25 +9,27 @@
   // intro
   .fylo-intro {
     h2 {
+      align-self: center;
       text-align: center;
-      max-width: 100%;
+      max-width: 80%;
+
     }
     p {
       align-self: center;
       text-align: center;
-      max-width: 100%;
+      max-width: 60%;
     }
   }
   .call-to-action-intro {
     flex-direction: column;
     input {
-      width: 100%;
+      width: 60%;
       margin-right: 0px;
       margin-bottom: 30px;
       padding: 11.2px 20px;
     }
     button {
-      width: 100%;
+      width: 60%;
       padding: 14.55px 0;
     }
   }
@@ -48,6 +49,7 @@
 
   //access 
   .fylo-access-grid {
+    justify-content: center;
     p {
       text-align: center;
     }
@@ -57,12 +59,16 @@
   }
 
   .call-to-action-access {
-    justify-content: center;
+    align-items: center;
     input {
-      max-width: 100%;
+      width: 60%;
+      margin-bottom: 30px;
+      padding: 11.2px;
     }
     .button-access{
-      width: 100%;
+      width: 60%;
+      align-self: center;
+      padding: 14.55px 0;
     }
   }
 }
@@ -71,6 +77,8 @@
 @media only screen and (max-width: 550px){
 
   .header { 
+    padding-left: 30px;
+    padding-right: 30px;
     ul li a {
       font-size: 0.7em;
       padding: 5px 0;
@@ -95,9 +103,32 @@
     font-size: 0.6em;
   }
 
-  .fylo-intro-grid, .fylo-description-grid, .fylo-access-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  .fylo-intro-grid, .fylo-description-grid, .fylo-access-grid{
+    grid-template-columns: 1fr;
+    padding-left: 30px;
+    padding-right: 30px;
   }
+
+  .fylo-intro{
+    h2 {
+      max-width: 80% !important;
+    }
+    p {
+      max-width: 80% !important;
+    }
+  }
+
+  .call-to-action-intro {
+    input {
+      width: 70%;
+      margin-bottom: 15px;
+    }
+    button{
+      width: 70%;
+    }
+  }
+
+  // Access 
 
   .fylo-access-grid {
     grid-gap: 30px;
@@ -109,9 +140,13 @@
       font-size: 1.1em;
     }
     p {
+      max-width: 70%;
       font-size: 0.8em;
     }
   }
+
+
+ // Description
 
   .fylo-description-bg {
     .desktop-bg-curve {
@@ -124,5 +159,10 @@
     position: relative;
     bottom: 100px; 
     height: 100px;
+  }
+
+  .footer {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
