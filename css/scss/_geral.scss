@@ -152,6 +152,17 @@ body {
   position: relative;
   a {
     color: var(--moderate-cyan);
+    text-decoration: none;
+    vertical-align: middle;
+    &:hover{
+      color: hsl(170, 45%, 73%);
+      use {
+        fill: hsl(170, 45%, 73%);
+      }
+      &::before{
+        background: hsl(170, 45%, 73%);
+      }
+    }
     &::before{
       content: '';
       display: block;
@@ -159,11 +170,11 @@ body {
       height: 1px;
       background: var(--moderate-cyan);
       position: absolute;
-      top: 30px;
+      top: 25px;
     }
-  }
-  img {
-    width: 16px;
+    svg {
+      vertical-align: middle;
+    }
   }
 }
 
