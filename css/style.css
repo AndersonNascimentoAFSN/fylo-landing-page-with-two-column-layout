@@ -481,16 +481,34 @@ body {
   align-items: flex-start;
 }
 
-/* line 324, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
-.social-media img {
+/* line 323, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.social-media a {
+  padding: 10px 0;
+  width: 40px;
+  margin-left: 10px;
+}
+
+/* line 331, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.social-media-icon svg {
   border: 1px solid var(--grayish-blue);
   border-radius: 50px;
 }
 
-/* line 328, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
-.social-media a {
-  width: 30px;
-  margin-left: 10px;
+/* line 334, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.social-media-icon svg:hover {
+  transition: 0.1s;
+  border-color: var(--moderate-cyan);
+  fill: var(--moderate-cyan);
+}
+
+/* line 340, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.social-media-icon svg path {
+  fill: var(--grayish-blue);
+}
+
+/* line 342, ../MEGA/projetos-web/fylo-landing-page-with-two-column-layout-master/css/scss/_geral.scss */
+.social-media-icon svg path:hover {
+  fill: var(--moderate-cyan);
 }
 
 @media only screen and (max-width: 953px) {

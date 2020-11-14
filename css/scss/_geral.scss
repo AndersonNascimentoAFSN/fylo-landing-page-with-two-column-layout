@@ -320,13 +320,28 @@ body {
 .social-media { 
   display: flex;
   align-items: flex-start;
- 
-  img {
+  a {
+    padding: 10px 0;
+    width: 40px;
+    margin-left: 10px;
+  }
+}
+
+.social-media-icon {
+  svg {
     border: 1px solid var(--grayish-blue);
     border-radius: 50px;
-  }
-  a {
-    width: 30px;
-    margin-left: 10px;
+    &:hover {
+      transition: 0.1s;
+      border-color: var(--moderate-cyan);
+      fill: var(--moderate-cyan);
+
+    }
+    path {
+      fill: var(--grayish-blue);
+      &:hover{
+        fill: var(--moderate-cyan);
+    }
+    }
   }
 }
